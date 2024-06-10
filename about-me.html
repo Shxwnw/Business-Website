@@ -9,10 +9,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #e3f2fd; /* Light blue background */
+            color: #333;
         }
         .navbar {
-            background-color: #333;
+            background-color: #1976d2; /* Dark blue background */
             overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .navbar a {
             float: left;
@@ -21,48 +24,92 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
         }
         .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #1565c0; /* Slightly darker blue on hover */
+            color: #fff;
         }
         .container {
+            max-width: 800px;
+            margin: 40px auto;
             padding: 20px;
+            background-color: #fff; /* White background for the container */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
         .headline {
-            font-size: 2em;
-            margin-bottom: 10px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #1976d2; /* Matching the navbar color */
+            text-align: center;
         }
         .introduction {
             font-size: 1.2em;
-            margin-bottom: 20px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: justify;
+            color: #555;
+        }
+        .images {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         .images img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            margin: 10px 0;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .images img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .about-header {
-            font-size: 2em;
+            font-size: 2.5em;
             margin-bottom: 20px;
+            color: #1976d2; /* Matching the navbar color */
+            text-align: center;
         }
         .about-text {
             font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+        .pdf-container {
+            margin-top: 40px;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href=index.html>Homepage</a>
-        <a href=Artifacts.html>Artifacts</a>
+        <a href="index.html">Homepage</a>
+        <a href="Artifacts.html">Artifacts</a>
     </div>
 
-        <div class="container" id="about-me">
+    <div class="container" id="about-me">
         <div class="about-header">About Me</div>
         <div class="about-text">
+            <!-- You can add the about text here -->
+        </div>
 
+        <div class="pdf-container">
+            <h2>Cover Letter</h2>
+            <iframe src="coverletter.pdf"></iframe>
+        </div>
+
+        <div class="pdf-container">
+            <h2>Resume</h2>
+            <iframe src="Resume.pdf"></iframe>
         </div>
     </div>
-
-            <a href=coverletter.pdf target="_blank">Cover Letter</a>
-            <a href=Resume.pdf target="_blank">Resume</a>
+</body>
+</html>
